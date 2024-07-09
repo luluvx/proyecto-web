@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet" href="../css/edit-detail-course/header.css">
+    <link rel="stylesheet" href="../css/edit-detail-course/course-info.css">
+    <link rel="stylesheet" href="../css/edit-detail-course/course-details.css">
+    <link rel="stylesheet" href="../css/edit-detail-course/add-lesson-modal.css">
+    <link rel="stylesheet" href="../css/edit-detail-course/edit-lesson-modal.css">
+    <link rel="stylesheet" href="../css/edit-detail-course/edit-course-modal.css">
+    <link rel="stylesheet" href="../css/edit-detail-course/edit-image-course-modal.css">
+    <title>QuickLearn</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <p class="logo">QuickLearn</p>
+            <nav class="menu-bar">
+                <ul>
+                    <li>
+                        <a id="btnHome" href="home-admin-courses.html">Home</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main-container">
+        <section class="course-info">
+            <div class="course-info-text">
+                <h2 class="course-title"></h2>
+                <h4></h4>
+                <p></p>
+                <button class="btnEditCourse">Editar</button>
+
+            </div>
+            <div class="course-info-img">
+                <img src="" alt="">
+                <button class="btnEditImage"><i class="fa-regular fa-image"></i>  Editar Imagen</button>
+            </div>
+        </section>
+        <section class="course-details">
+            <h2>¿Que aprenderas?</h2>
+            <button id="btnAddLesson">Agregar lección</button>
+            <div class="lessons">
+                <div class="lesson" >
+                    <div class="lesson-info">
+                        <a class="lessonType"><i class="fa fa-solid fa-trash"></i></a>
+                        <h3 class="lesson-title">HOLA</h3>
+                    </div>
+                    <div class="lesson-controls"> <!-- Controles de lección -->
+                       <button class="btnEditLesson">Editar</button>
+                        <button class="btnDeleteLesson">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <div id="editCourseModal" style="display: none;">
+        <div class="modal-content">
+            <h2>Editar Curso</h2>
+            <form class="form-edit-course">
+                <label for="courseName">Nombre del Curso:</label>
+                <input type="text" id="courseName" name="courseName">
+                <label for="coursePreDescription">Pre-descripción del Curso:</label>
+                <textarea id="coursePreDescription" name="coursePreDescription"></textarea>
+                <label for="courseDescription">Descripción del Curso:</label>
+                <textarea id="courseDescription" name="courseDescription"></textarea>
+                <button type="submit">Guardar</button>
+            </form>
+            <button class="close">Cerrar</button>
+        </div>
+    </div>
+    <div id="editImageModal" style="display: none;">
+        <div class="modal-content">
+            <h2>Editar Imagen del Curso</h2>
+            <form class="form-edit-image">
+                <label for="courseImage">Imagen del Curso:</label>
+                <input type="file" id="courseImage" name="courseImage">
+                <button type="submit">Guardar Imagen</button>
+            </form>
+            <button class="close">Cerrar</button>
+        </div>
+    </div>
+    <div id="editLessonModal" style="display: none;">
+        <div class="modal-content">
+            <h2>Editar Lección</h2>
+            <!-- Formulario para editar la lección -->
+            <form class="form-edit-lesson">
+                <input type="hidden" name="lessonId">
+                <label for="lessonTitle">Título de la Lección:</label>
+                <input type="text" id="lessonTitle" name="lessonTitle">
+                <label for="lessonDescription">Descripción:</label>
+                <textarea id="lessonDescription" name="lessonDescription"></textarea>
+                <label for="lessonOrder">Orden:</label>
+                <input type="number" id="lessonOrder" name="lessonOrder" min="1">
+                <label>Tipo de la Lección:</label>
+                <div id="editLessonType">
+                    <input type="radio" id="editTypeText" name="lessonType" value="texto">
+                    <label for="editTypeText">Texto</label>
+                    <input type="radio" id="editTypeVideo" name="lessonType" value="video">
+                    <label for="editTypeVideo">Video</label>
+                </div>
+                <label for="lessonContent">Contenido de la Lección:</label>
+                <textarea id="lessonContent" name="lessonContent"></textarea>
+                <button class="save-information" type="submit">Guardar</button>
+            </form>
+            <button class="close" onclick="closeEditLessonModal()">Cerrar</button>
+        </div>
+    </div>
+    <div id="addLessonModal" style="display: none;">
+        <div class="modal-content">
+            <h2>Agregar Lección</h2>
+            <!-- Formulario para agregar la lección -->
+            <form class="form-add-lesson">
+                <label for="addLessonTitle">Título de la Lección:</label>
+                <input type="text" id="addLessonTitle" name="lessonTitle">
+                <label>Tipo de la Lección:</label>
+                <div id="addLessonType">
+                    <input type="radio" id="typeText" name="lessonType" value="texto">
+                    <label for="typeText">Texto</label>
+                    <input type="radio" id="typeVideo" name="lessonType" value="video">
+                    <label for="typeVideo">Video</label>
+                </div>
+                <label for="addLessonContent">Contenido de la Lección:</label>
+                <textarea id="addLessonContent" name="lessonContent"></textarea>
+                <label for="addLessonDescription">Descripción de la Lección:</label>
+                <textarea id="addLessonDescription" name="lessonDescription"></textarea>
+                <label for="addLessonOrder">Orden de la Lección:</label>
+                <input type="number" id="addLessonOrder" name="lessonOrder" min="1">
+                <button type="submit">Guardar</button>
+            </form>
+            <button class="close">Cerrar</button>
+        </div>
+    </div>
+
+    <!--<script src="../scripts/edit-detail-course/edit-detail-course.js"></script>
+    <script src="../scripts/edit-detail-course/fillCourseInformation.js"></script>-->
+
+
+    <script src="../scripts/edit-detail-course/loadCourseDetail.js"></script>
+    <script src="../scripts/edit-detail-course/edit-course.js"></script>
+    <script src="../scripts/edit-detail-course/load-lessons.js" type="module"></script>
+    <script src="../scripts/edit-detail-course/add-lesson.js"></script>
+    <script src="../scripts/open-modal.js" type="module"></script>
+    <script src="../scripts/edit-detail-course/edit-lesson.js" type="module"></script>
+    <script src="../scripts/edit-detail-course/edit-image-course.js" type="module"></script>
+
+</body>
+
+</html>

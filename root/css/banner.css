@@ -1,0 +1,54 @@
+.banner {
+    margin: 0;
+}
+
+.banner .container{
+    background: url("../assets/images/guy-programming.png") center center no-repeat;
+    background-size: contain;
+    background-color: #3573ef57;
+    border-radius: 20px;
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+}
+
+.banner .container img{
+    width: 100%;
+}
+
+.banner .container h1{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+    color: var(--third-color);
+}
+
+.banner .container p{
+    text-align: center;
+    font-weight: 300;
+    color: var(--third-color);
+}
+
+@media (min-width: 768px){
+    .banner h1{
+        font-size: 60px;
+    }
+    .banner p{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 992px){
+    .banner .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 700px;
+    }
+    .banner h1{
+        font-size: 80px;
+    }
+    .banner p{
+        font-size: 25px;
+    }
+}

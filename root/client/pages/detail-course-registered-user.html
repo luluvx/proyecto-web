@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet" href="../css/detail-course-registered-user/header.css">
+    <link rel="stylesheet" href="../css/detail-course-registered-user/course-info.css">
+    <link rel="stylesheet" href="../css/detail-course-registered-user/course-details.css">
+    <link rel="stylesheet" href="../css/detail-course-registered-user/footer.css">
+    <script src="../js/course-information.js" type="module"></script>
+    <script src="../js/load-user-progress.js" type="module"></script>
+    <script src="../js/utils.js" type="module"></script>
+
+    <title>QuickLearn</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <p class="logo">QuickLearn</p>
+        <nav class="menu-bar">
+            <label for="menu-switch-header" class="menu-mobile-label-header">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <input id="menu-switch-header" type="checkbox">
+            <ul>
+                <li>
+                    <a href="" id="label-profile">Perfil</a>
+                </li>
+                <li><a id="btnCerrarSesion" href="#">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <main class="main-container">
+        <section class="course-info">
+            <div class="course-info-text">
+                <h2 class="course-title">HTML Y CSS FUNDAMENTALS</h2>
+                <h4>Aprende a construir páginas web visualmente impactantes desde cero.</h4>
+                <p>Este curso te brinda los conocimientos esenciales para construir sitios web modernos y atractivos. Aprenderás a crear estructuras sólidas con HTML y a darles vida con estilos elegantes usando CSS. Al finalizar, estarás preparado para diseñar y desarrollar tus propios proyectos web con confianza y habilidad</p>
+                <button class="btnInscribirse">Inscribirse</button>
+                <button class="btnAbandonarCurso">Abandonar curso</button>
+            </div>
+            <div class="course-info-img">
+                <img src="/root/assets/images/fundamentals.png" alt="Imagen del curso">
+            </div>
+        </section>
+        <section class="course-details">
+            <div class="lessons">
+                <h2>¿Que aprenderas?</h2>
+                <div id="lessons-error" class="error-message" style="display: none;">No se encontraron lecciones para este curso.</div>
+                <!--LESSON ITEM-->
+                <!--LESSON ITEM-->
+                <!--<div class="lesson">
+                    <h3 class="lesson-title"></h3>
+                    <a class="lesson-type"><i class=""></i></a>
+                </div>-->
+            </div>
+            <div class="course-extras">
+                <h3>Progreso del curso</h3>
+                <div class="progress-section">
+                    <p>¡En marcha! Sigue tu progreso y alcanza tus metas</p>
+                    <progress value="0" max="100"></progress>
+                </div>
+                <button class="btnInscribirse">Inscribirse</button>
+                <button class="btnAbandonarCurso">Abandonar curso</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="social-media">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <p>QuickLearn</p>
+            <div class="copyright-container">
+                <p class="copyright-text">Copyright 2017 All Rights Reserved by QuickLearn.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet" href="../css/home-registered-user/header.css">
+    <link rel="stylesheet" href="../css/home-registered-user/search-bar.css">
+    <link rel="stylesheet" href="../css/home-registered-user/categories-courses.css">
+    <link rel="stylesheet" href="../css/home-registered-user/courses-section.css">
+    <link rel="stylesheet" href="../css/home-registered-user/footer.css">
+    <link rel="stylesheet" href="../css/home-registered-user/side-bar.css">
+    <!--<script src="../js/home-registered-user/courses-section.js"></script>-->
+
+    <script src="../js/load-home.js" type="module"></script>
+    <script src="../js/manageSession.js" type="module"></script>
+    <script src="../js/utils.js" type="module"></script>
+    <script src="../js/categories.js" type="module"></script>
+    <script src="../js/courses.js" type="module"></script>
+
+
+    <!--<script src="../js/courses.js" type="module"></script>
+    <script src="../js/categories.js" type="module"></script>
+    <script src="../../js/utils.js" type="module"></script>-->
+    <title>QuickLearn</title>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <p class="logo">QuickLearn</p>
+        <nav class="menu-bar">
+            <label for="menu-switch-header" class="menu-mobile-label-header">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <input id="menu-switch-header" type="checkbox">
+            <ul>
+                <li>
+                    <a href="" id="label-profile">Perfil</a>
+                </li>
+                <li><a id="btnCerrarSesion" href="#">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <!--<button class="menu-icon" onclick="toggleSidebar()">&#9776;</button>-->
+
+    <main class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <p>QuickLearn</p>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="home-registered-user.html" id="home"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="my-courses.html"><i class="fa-solid fa-book"></i> Mis Cursos</a></li>
+                <li><a href="#categoriesSection" id="categories"><i class="fa-solid fa-layer-group"></i> Categorias</a></li>
+            </ul>
+        </div>
+        <section class="search-bar">
+            <input type="text" placeholder="Buscar cursos">
+        </section>
+        <section class="categories-courses" id="categoriesSection">
+            <div class="categories-container" id="categories-container">
+                <!--<div class="categorie-course-item">
+                    <img src="/root/assets/images/programacion3.png" alt="Imagen categoria programacion">
+                    <h3>Programacion</h3>
+                </div>
+                <div class="categorie-course-item">
+                    <img src="/root/assets/images/sitio-web1.png" alt="">
+                    <h3>Desarrollo <br> Web</h3>
+                </div>
+                <div class="categorie-course-item">
+                    <img src="/root/assets/images/desarrollo-de-aplicaciones.png" alt="">
+                    <h3>Desarrollo <br> Movil</h3>
+                </div>
+                <div class="categorie-course-item">
+                    <img src="/root/assets/images/inteligencia-artificial.png" alt="">
+                    <h3>Inteligencia <br>Artificial</h3>
+                </div>
+                <div class="categorie-course-item">
+                    <img src="/root/assets/images/inteligencia-artificial.png" alt="">
+                    <h3>Inteligencia <br>Artificial</h3>
+                </div>
+                <div class="categorie-course-item">
+                    <img src="/root/assets/images/inteligencia-artificial.png" alt="">
+                    <h3>Inteligencia <br>Artificial</h3>
+                </div>
+                <div class="categorie-course-item">
+                    <img src="/root/assets/images/inteligencia-artificial.png" alt="">
+                    <h3>Inteligencia <br>Artificial</h3>
+                </div>-->
+            </div>
+        </section>
+        <section class="courses-section">
+            <div class="courses" id="courses-container">
+                <!--<div class="course-item" onclick="window.location.href='detail-course-registered-user.html'">
+                    <img src="/root/assets/images/fundamentals.png" alt="Imagen curso programacion">
+                    <h3>HTML Y CSS FUNDAMENTALS</h3>
+                </div>
+                <div class="course-item">
+                    <img src="/root/assets/images/desarrollo-web.png" alt="">
+                    <h3>DESARROLLO WEB PARA PRINCIPIANTES</h3>
+                </div>
+                <div class="course-item">
+                    <img src="/root/assets/images/mi-primera-pagina-web.png" alt="">
+                    <h3>MI PRIMER PAGINA WEB</h3>
+                </div>
+                <div class="course-item">
+                    <img src="/root/assets/images/react.png" alt="">
+                    <h3>REACT</h3>
+                </div>
+                <div class="course-item">
+                    <img src="/root/assets/images/angular.png" alt="">
+                    <h3>ANGULAR</h3>
+                </div>
+                <div class="course-item">
+                    <img src="/root/assets/images/node.png" alt="">
+                    <h3>Node.js</h3>
+                </div>-->
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="social-media">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <p>QuickLearn</p>
+            <div class="copyright-container">
+                <p class="copyright-text">Copyright 2017 All Rights Reserved by QuickLearn.</p>
+            </div>
+        </div>
+    </footer>
+    <!--<script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('open');
+        }
+    </script>-->
+    <script>
+        document.getElementById('btnCerrarSesion').addEventListener('click', function() {
+            import('../js/utils.js').then(module => {
+                module.logout();
+
+            });
+            window.location.href='../../login-page.html'
+        });
+    </script>
+
+
+</body>
+</html>
+
+
+

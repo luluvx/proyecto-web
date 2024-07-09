@@ -1,0 +1,117 @@
+#editImageModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+    width: 90%;
+    max-width: 500px; /* Ajuste para pantallas más pequeñas */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Jost-Medium', sans-serif;
+}
+
+.modal-content form label {
+    font-family: 'Jost-Medium', sans-serif;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.modal-content form button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.modal-content .close {
+    background-color: #dc3545;
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.modal-content form button:hover {
+    opacity: 0.9;
+}
+
+.modal-content .close:hover {
+    background-color: #c82333;
+}
+
+@media (min-width: 762px) and (max-width: 991px) {
+    #editImageModal {
+        width: 700px;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+
+    .modal-content form input,
+    .modal-content form textarea {
+        font-size: 16px;
+    }
+
+    .modal-content form button {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    #editImageModal {
+        width: 900px;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+
+    .modal-content form input,
+    .modal-content form textarea {
+        font-size: 18px;
+    }
+
+    .modal-content form button {
+        font-size: 18px;
+    }
+}

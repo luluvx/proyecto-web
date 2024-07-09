@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home-admin-user/course-section-admin.css">
+
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet" href="../css/home-admin-user/search-bar.css">
+    <link rel="stylesheet" href="../css/home-admin-user/add-course-modal.css">
+    <link rel="stylesheet" href="../css/home-admin-user/side-bar.css">
+    <link rel="stylesheet" href="../css/home-admin-user/menu-bar.css">
+
+
+    <link rel="stylesheet" href="../css/home-admin-user/header.css">
+    <script src="../scripts/home-admin-courses/courses.js" type="module"></script>
+    <script src="../scripts/home-admin-courses/addCourse.js" type="module"></script>
+    <title>QuickLearn</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <p class="logo">QuickLearn</p>
+        <nav class="menu-bar">
+            <label for="menu-switch-header" class="menu-mobile-label-header">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <input id="menu-switch-header" type="checkbox">
+            <ul>
+                <li>
+                    <a href="" id="label-profile">Perfil</a>
+                </li>
+                <li><a id="btnCerrarSesion" href="#">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="main-container">
+    <aside class="sidebar">
+        <h2 class="admin-dashboard">Admin <span>Dashboard</span></h2>
+        <nav class="nav">
+            <label for="menu-switch" class="menu-mobile-label">
+                <i class="fa-solid fa-chevron-down"></i>
+            </label>
+            <input id="menu-switch" type="checkbox">
+            <ul>
+                <li>
+                    <a href="home-admin-courses.html" class="nav-item">
+                        <img src="../../assets/images/biblioteca-en-linea.png" alt="Loguito cursos">Cursos
+                    </a>
+                </li>
+                <li>
+                    <a href="home-admin-categories.html" class="nav-item">
+                        <img src="../../assets/images/categoria.png" alt="Loguito categorias">Categorias
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <section class="content">
+        <section class="search-bar">
+            <input type="text" placeholder="Buscar cursos">
+            <!--<button id="btnAddCourse"><i class="fa-solid fa-plus"></i></button>-->
+        </section>
+        <section class="add-course">
+            <button id="btnAddCourse"><i class="fa-solid fa-plus"></i>Agregar curso</button>
+        </section>
+        <section class="course-section">
+            <div class="container">
+                <div class="course-card">
+                    <div class="course-image">
+                        <!--<img src="../../assets/images/fundamentals.png" alt="Curso 1">-->
+                    </div>
+                    <div class="course-info">
+                        <!--<h3>HTML Y CSS FUNDAMENTALS</h3>-->
+                        <div class="course-controlers">
+                            <!--<button class="editCourse"><i class="fa-solid fa-pen-to-square"></i>Editar</button>
+                            <button class="deleteCourse"><i class="fa-solid fa-trash"></i> Eliminar</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+<div id="addCourseModal" style="display: none;">
+    <div class="modal-content">
+        <h2>Agregar Curso</h2>
+        <!-- Formulario para agregar el curso -->
+        <form class="form-add-course" onsubmit="return validateAddCourseForm()">
+            <label for="courseName">Nombre del Curso:</label>
+            <input type="text" id="courseName" name="courseName">
+            <div id="courseNameError" style="color: red; display: none;">El nombre del curso es obligatorio.</div>
+
+            <label for="coursePreDescription">Pre-descripción del Curso:</label>
+            <textarea id="coursePreDescription" name="coursePreDescription"></textarea>
+            <div id="coursePreDescriptionError" style="color: red; display: none;">La pre-descripción del curso es obligatoria.</div>
+
+            <label for="courseDescription">Descripción del Curso:</label>
+            <textarea id="courseDescription" name="courseDescription"></textarea>
+            <div id="courseDescriptionError" style="color: red; display: none;">La descripción del curso es obligatoria.</div>
+
+            <label for="courseImage">Imagen del Curso:</label>
+            <input type="file" id="courseImage" name="courseImage">
+            <div id="courseImageError" style="color: red; display: none;">La imagen del curso es obligatoria.</div>
+
+            <label for="courseCategory">Categoría del Curso:</label>
+            <select id="courseCategory" name="courseCategory" required>
+                <!-- Las categorías se cargarán aquí dinámicamente -->
+            </select>
+            <div id="courseCategoryError" style="color: red; display: none;">La categoría del curso es obligatoria.</div>
+
+            <button type="submit">Guardar</button>
+        </form>
+        <button class="close">Cerrar</button>
+    </div>
+</div>
+
+
+<script>
+    document.getElementById('btnCerrarSesion').addEventListener('click', function() {
+        import('../../client/js/utils.js').then(module => {
+            module.logout();
+        });
+        window.location.href='../../login-page.html';
+    });
+</script>
+</body>
+</html>

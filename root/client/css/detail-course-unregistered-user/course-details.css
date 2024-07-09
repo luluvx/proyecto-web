@@ -1,0 +1,262 @@
+.course-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0 0 0;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #27292A;
+}
+.course-details h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--blue);
+    text-align: center;
+}
+
+.lessons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.lessons .lesson{
+    font-family: 'Jost-Regular', sans-serif;
+    padding: 15px 20px;
+    border: 1px solid #4e4b4b3b;
+    border-radius: 10px;
+    color: #F5F7FA;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #4a82f1d1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lessons .lesson h3{
+    font-size: 14px;
+    margin: 10px 0;
+}
+.lessons .lesson p{
+    font-size: 20px;
+}
+.lessons .lesson:hover{
+    background-color: rgb(48, 52, 55);
+    cursor: pointer;
+    transition: 0.3s;
+    color: #4a82f1d1;
+}
+/*EXTRAS*/
+.course-extras{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0 0 0;
+    background-color: #4b4c4d;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.course-extras h3{
+    font-family: 'Poppins', sans-serif;
+    color: #d3d4d4;
+    margin: 0 0 10px 0;
+}
+
+ .progress-section p {
+    font-family: 'Jost-Regular', sans-serif;
+    color: #d3d4d4;
+    font-size: 14px;
+}
+.progress-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.course-extras button{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--blue);
+    color: #e2e2e2;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+.progress-section progress{
+    width: 100%;
+}
+#lessons-error{
+    font-family: 'Jost-Regular', sans-serif;
+
+    border-radius: 10px;
+    text-align: center;
+
+    font-size: 15px;
+    color: #f5f7fa;
+    font-weight: bold;
+    padding: 40px 20px;
+    background-color: #212223;
+}
+@media (min-width: 768px){
+    .course-details h2{
+        font-size: 30px;
+    }
+    .course-extras{
+        padding: 23px;
+    }
+    .course-extras .profesor-section img{
+        max-width: 20%;
+        height: auto;
+        border-radius: 10px;
+        margin-right: 20px;
+    }
+    .course-extras h3{
+        font-size: 28px;
+    }
+
+    .progress-section p {
+        font-size: 20px;
+    }
+    .progress-section{
+        margin: 0;
+    }
+
+    .lessons .lesson p{
+        font-size: 30px;
+        margin: 10px ;
+    }
+    .lessons .lesson h3{
+        font-size: 18px;
+        margin: 0;
+    }
+    #lessons-error{
+        font-size: 23px;
+        padding: 50px 40px;
+    }
+}
+@media (min-width: 992px){
+    .course-details{
+        flex-direction: row;
+        justify-content: space-between;
+    
+    }
+    .course-extras{
+        max-width: 40%;
+        margin: 40px 0px 0px 0px;
+    }
+    .lessons {
+        justify-content: end;
+        gap: 18px;
+        margin-right: 20px;
+      
+    }
+    .lessons h2{
+        margin: 0;
+    }
+    .course-extras h3{
+        font-size: 18px;
+    }
+    .course-extras progress{
+        width: 100%;
+    }
+    .lessons .lesson h3{
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    .lessons .lesson p{
+        font-size: 25px;
+
+    }
+
+
+    .progress-section p {
+        font-size: 12px;
+    
+    }
+    #lessons-error{
+        font-size: 22px;
+        color: #f5f7fa;
+        font-weight: bold;
+        padding: 85px 40px;
+        background-color: #212223;
+
+
+    }
+}
+/*
+.course-details{
+    display: flex;
+    flex-direction: row;
+}
+.lessons{
+    margin-right: 20px;
+}
+.lessons .lesson{
+    max-width: 100%;
+}
+.course-extras h3{
+    margin: 0;
+}
+.course-extras{
+    max-width: 48%;
+}
+.course-extras .profesor-section img{
+
+    margin-right: 10px;
+}
+.progress-section{
+    max-width: 100%;
+}
+.course-extras button{
+    max-width: 100%;
+}*/
+/*
+.course-extras{
+    margin-top: 20px;
+}
+
+ .instructor, .progress {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.instructor h3, .progress h3 {
+    margin:0;
+}*/
+    
+/*
+@media (min-width: 768px) {
+    .course-info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .course-info-text {
+        text-align: left;
+        max-width: 50%;
+        margin-bottom: 0;
+    }
+
+    .course-info-img {
+        max-width: 50%;
+    }
+
+    .lessons, .course-extras {
+        flex-direction: row;
+    }
+
+    .lesson, .instructor, .progress {
+        max-width: 48%;
+    }
+
+    .progress progress {
+        width: 100%;
+    }
+}*/

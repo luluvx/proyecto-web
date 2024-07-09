@@ -1,0 +1,120 @@
+#editLessonModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+#editLessonModal .modal-content {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f1f1;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+#editLessonModal .form-edit-lesson {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#editLessonModal .form-edit-lesson label {
+    font-family: 'Jost-Medium', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+#editLessonModal .form-edit-lesson input,
+#editLessonModal .form-edit-lesson textarea {
+    font-family: 'Jost-Regular', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#editLessonModal .form-edit-lesson .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#editTypeText, #editTypeVideo{
+    margin: 0;
+}
+
+#editLessonType {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    width: 30%;
+}
+
+#editLessonType label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Jost-Medium', sans-serif;
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+
+#editLessonModal .form-edit-lesson button {
+    font-family: 'Jost-Medium', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3572EF;
+    color: #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#editLessonModal .close {
+    width: 100%;
+    font-size: 14px;
+    border-radius: 5px;
+    color: #f1f1f1;
+    padding: 5px;
+    font-weight: bold;
+    background-color: #ff353d;
+    border: none;
+    margin-top: 6px;
+    font-family: 'Jost-Regular', sans-serif;
+}
+
+@media (min-width: 768px){
+    #editLessonModal .modal-content {
+        width: 50%;
+    }
+    #editLessonModal .form-edit-lesson label {
+        font-size: 16px;
+    }
+    #editLessonModal .form-edit-lesson input,
+    #editLessonModal .form-edit-lesson textarea{
+        font-size: 16px;
+    }
+}
+@media (min-width: 992px){
+    #editLessonModal .modal-content {
+        width: 50%;
+    }
+    #editLessonModal .form-edit-lesson label {
+        font-size: 16px;
+    }
+    #editLessonModal .form-edit-lesson input,
+    #editLessonModal .form-edit-lesson textarea{
+        font-size: 16px;
+    }
+}

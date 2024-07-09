@@ -1,0 +1,92 @@
+.inscription{
+    background-color: #27292A;
+    border-radius: 20px;
+}
+.inscription .container{
+    padding: 20px 20px;
+    font-family: 'Poppins';
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--third-color);
+}
+.inscription .container img{
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    margin: 0px;
+}
+.inscription-content h2{
+    color: var(--blue);
+    font-size: 30px;
+}
+.inscription-content p{
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 200;
+
+}
+.inscription .container button{
+    background-color: #3572EF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 20px 0px;
+}
+.inscription .container button:hover{
+    background-color: #ffffffca;
+    color: #3572EF;
+}
+@media (min-width: 768px){
+    .inscription .container{
+        height: auto;
+        padding: 20px 20px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+    .inscription-content{
+        padding: 20px 40px 20px 20px;
+    }
+    .inscription-content h2{
+        font-size: 44px;
+    }
+    .inscription .container img{
+        width: 50%;
+        height: 40%;
+        border-radius: 10px;
+        margin: 0px; 
+    }
+    .inscription .container img{
+        filter: grayscale(20%);
+        border-radius: 10px;
+    }
+}
+@media (min-width: 992px){ 
+    .inscription .container{
+        height: auto;
+    }
+    .inscription-content h2{
+        font-size: 70px;
+    }
+    .inscription-content p{
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .inscription .container img{
+        width: 40%;
+        height: 100%;
+    }
+    .inscription .container button{
+        font-size: 25px;
+        padding: 15px 30px;
+    }
+}

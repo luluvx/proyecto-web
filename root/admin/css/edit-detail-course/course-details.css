@@ -1,0 +1,157 @@
+.course-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #27292A;
+}
+
+.course-details h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--blue);
+    text-align: center;
+}
+
+.lessons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+}
+
+.lessons button , #btnAddLesson{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--blue);/* Color de botón más vibrante */
+    color: #e2e2e2;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.lessons .lesson{
+    font-family: 'Jost-Regular', sans-serif;
+    padding-top: 13px;
+    border: 1px solid #2c2f30;
+    border-radius: 10px;
+    color: #e2e2e2;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #313233;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lessons .lesson .lessonType{
+    text-align: center;
+    margin: 0;
+    color: var(--blue);
+    font-size: 20px;
+}
+.lesson-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.lessons .lesson .lesson-title{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    margin: 16px 0;
+    color: white;
+}
+
+
+.lessons .lesson .lesson-controls{
+    display: flex;
+    justify-content: center;
+
+    padding: 10px;
+    background-color: #2c2f30;
+    border-radius: 0 0 10px 10px;
+
+    width: 100%;
+
+}
+
+.lesson-controls .btnEditLesson{
+    color: #F5F7FA;
+    font-size:12px;
+    margin: 0;
+    border-radius: 10px 0 0 10px;
+
+}
+.lesson-controls .btnDeleteLesson{
+    background-color: #2C9E4B;
+    border-radius: 0 10px 10px 0;
+    font-size: 12px;
+    margin: 0;
+}
+
+
+
+.lessons .lesson h3{
+    margin: 20px 0;
+    font-size: 18px; /* Tamaño de fuente más grande */
+}
+
+
+@media (min-width: 768px){
+    .lessons .lesson{
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+        padding: 10px 30px;
+    }
+    .lesson-title{
+        display: flex;
+
+        align-items: center;
+        gap: 28px;
+        width: 93%;
+        font-size: 18px;
+    }
+    .lessons .lesson h3{
+        font-size: 18px;
+    }
+
+    /*.lessons .lesson .lesson-controls {
+        justify-content: end;
+        background-color: transparent;
+        flex-direction: column;
+        border-radius: 0;
+        gap: 10px;
+        width: 7%;
+    }
+    .lessons .lesson .lesson-controls button {
+        background-color: #3572EF;
+    }*/
+    #btnAddLesson{
+        width: 50%;
+    }
+    .lessons .lesson .lesson-controls{
+        border-radius: 10px;
+    }
+
+    .lesson-info{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        gap: 20px;
+        width: 900%;
+    }
+
+}
+@media (min-width: 992px){
+    .lesson-title{
+        margin: 0;
+    }
+
+}

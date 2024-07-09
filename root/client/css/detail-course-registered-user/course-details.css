@@ -1,0 +1,298 @@
+.course-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #27292A;
+
+}
+.course-details h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--blue);
+    text-align: center;
+}
+
+.lessons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.lessons .lesson{
+
+    /*background-color: var(--blue);*/
+    font-family: 'Jost-Regular', sans-serif;
+    padding: 15px;
+    border: 1px solid #4e4b4b3b;
+    border-radius: 10px;
+    color: #F5F7FA;
+
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #4a82f1d1;/*#3573efac*/
+    display: flex;
+    justify-content: space-between;
+
+}
+.lessons .lesson button{
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #F5F7FA;
+}
+.lessons .lesson:hover{
+    background-color: rgb(48, 52, 55);
+    cursor: pointer;
+    transition: 0.3s;
+
+    color: #4a82f1d1;
+}
+.lessons .lesson h3{
+    margin: 10px 0px;
+}
+/*EXTRAS*/
+.course-extras{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    margin: 20px 0px;
+    background-color: #4b4c4d;
+    padding: 20px;
+    border-radius: 10px;
+}
+/*.course-extras .profesor-section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.course-extras .profesor-section img{
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}*/
+.course-extras h3{
+    font-family: 'Poppins', sans-serif;
+    color: #d3d4d4;
+    margin: 0px 0 10px 0;
+  
+}
+.progress-section p {
+    font-family: 'Jost-Regular', sans-serif;
+    color: #d3d4d4;
+    font-size: 14px;
+
+}
+.progress-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+.progress-section progress{
+    width: 100%;
+}
+.btnInscribirse{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--blue);
+    color: #e2e2e2;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+
+}
+
+#lessons-error{
+    font-family: 'Jost-Regular', sans-serif;
+
+    border-radius: 10px;
+    text-align: center;
+
+    font-size: 15px;
+    color: #f5f7fa;
+    font-weight: bold;
+    padding: 60px 20px;
+    background-color: #212223;
+}
+.course-info-text .btnAbandonarCurso{
+    font-family: 'Poppins', sans-serif;
+    background-color: /*#f43f3f*/#F33535;
+    color: #e2e2e2;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 20px;
+
+    display: none;
+
+}
+ .course-extras .btnAbandonarCurso{
+    font-family: 'Poppins', sans-serif;
+    background-color: /*#f43f3f*/#F33535;
+    color: #e2e2e2;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+    display: none;
+}
+@media (min-width: 768px){
+    .course-extras{
+
+
+        padding: 15px 20px;
+    }
+
+    .course-extras h3{
+        font-size: 24px;
+    }
+    .progress-section p {
+        font-size: 18px;
+    
+    }
+    .progress-section{
+        margin: 0;
+    }
+    #lessons-error{
+        font-size: 23px;
+        padding: 50px 40px;
+    }
+    .course-extras{
+
+
+        width: 100%;
+        margin: 20px 0px;
+        background-color: #4b4c4d;
+        padding: 40px;
+        border-radius: 10px;
+    }
+}
+@media (min-width: 992px){
+    .course-details{
+        flex-direction: row;
+        justify-content: space-between;
+    
+    }
+    .course-extras{
+        align-items: start;
+        max-width: 40%;
+        height: auto;
+        margin: 0;
+    }
+    .lessons {
+        justify-content: end;
+        gap: 18px;
+        margin-right: 20px;
+      
+    }
+    .lessons h2{
+        margin: 0;
+    }
+    .course-extras h3{
+        font-size: 22px;
+    }
+    .course-extras progress{
+        width: 100%;
+    }
+
+    .progress-section p {
+        font-size: 12px;
+    
+    }
+    #lessons-error{
+        font-size: 22px;
+        color: #f5f7fa;
+        font-weight: bold;
+        padding: 85px 40px;
+        background-color: #212223;
+
+
+    }
+  
+}
+/*
+.course-details{
+    display: flex;
+    flex-direction: row;
+}
+.lessons{
+    margin-right: 20px;
+}
+.lessons .lesson{
+    max-width: 100%;
+}
+.course-extras h3{
+    margin: 0;
+}
+.course-extras{
+    max-width: 48%;
+}
+.course-extras .profesor-section img{
+
+    margin-right: 10px;
+}
+.progress-section{
+    max-width: 100%;
+}
+.course-extras button{
+    max-width: 100%;
+}*/
+/*
+.course-extras{
+    margin-top: 20px;
+}
+
+ .instructor, .progress {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.instructor h3, .progress h3 {
+    margin:0;
+}*/
+    
+/*
+@media (min-width: 768px) {
+    .course-info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .course-info-text {
+        text-align: left;
+        max-width: 50%;
+        margin-bottom: 0;
+    }
+
+    .course-info-img {
+        max-width: 50%;
+    }
+
+    .lessons, .course-extras {
+        flex-direction: row;
+    }
+
+    .lesson, .instructor, .progress {
+        max-width: 48%;
+    }
+
+    .progress progress {
+        width: 100%;
+    }
+}*/

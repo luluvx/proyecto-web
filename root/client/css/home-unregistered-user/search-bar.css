@@ -1,0 +1,29 @@
+
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    font-family: 'Jost-Medium', sans-serif;
+}
+.search-bar input{
+    padding: 10px 20px;
+    width: 60%;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    margin: 0px 0px 20px;
+    
+}
+@media (min-width: 768px){
+    .search-bar input{
+        width: 70%;
+    }
+
+}
+@media (min-width: 992px){
+    .search-bar input{
+        width: 50%;
+    }
+}

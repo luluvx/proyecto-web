@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet" href="../css/home-admin-categories/header.css">
+    <link rel="stylesheet" href="../css/home-admin-categories/category-section-admin.css">
+
+    <link rel="stylesheet" href="../css/home-admin-categories/menu-bar.css">
+    <link rel="stylesheet" href="../css/home-admin-categories/modal-categories.css">
+
+    <link rel="stylesheet" href="../css/home-admin-categories/search-bar.css">
+    <link rel="stylesheet" href="../css/home-admin-categories/side-bar.css">
+
+
+    <title>QuickLearn</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <p class="logo">QuickLearn</p>
+            <nav class="menu-bar">
+                <label for="menu-switch-header" class="menu-mobile-label-header">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <input id="menu-switch-header" type="checkbox">
+                <ul>
+                    <li>
+                        <a href="" id="label-profile">Perfil</a>
+                    </li>
+                    <li><a id="btnCerrarSesion" href="#">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main-container">
+        <aside class="sidebar">
+            <h2 class="admin-dashboard">Admin <span>Dashboard</span></h2>
+            <nav class="nav">
+                <label for="menu-switch" class="menu-mobile-label">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </label>
+                <input id="menu-switch" type="checkbox">
+                <ul>
+                    <li>
+                        <a href="home-admin-courses.html" class="nav-item">
+                            <img src="../../assets/images/biblioteca-en-linea.png" alt="Loguito cursos">Cursos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="home-admin-categories.html" class="nav-item">
+                            <img src="../../assets/images/categoria.png" alt="Loguito categorias">Categorias
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <section class="content">
+            <section class="search-bar">
+                <input type="text" placeholder="Buscar cursos">
+            </section>
+
+            <section class="add-category">
+                <button id="btnAddCategory"><i class="fa-solid fa-plus"></i>Agregar categoria</button>
+            </section>
+            <section class="category-section">
+                <div class="container">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img >
+                        </div>
+                        <div class="category-info">
+                            <h3 class="categoryName"></h3>
+                            <div class="category-controlers">
+                                <button class="btnEditCategory" ><i class="fa-solid fa-pen-to-square"></i>Editar</button>
+                                <button class="btnDeleteCategory"><i class="fa-solid fa-trash"></i> Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img >
+                        </div>
+                        <div class="category-info">
+                            <h3 class="categoryName"></h3>
+                            <div class="category-controlers">
+                                <button class="btnEditCategory" ><i class="fa-solid fa-pen-to-square"></i>Editar</button>
+                                <button class="btnDeleteCategory"><i class="fa-solid fa-trash"></i> Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img >
+                        </div>
+                        <div class="category-info">
+                            <h3 class="categoryName"></h3>
+                            <div class="category-controlers">
+                                <button class="btnEditCategory" ><i class="fa-solid fa-pen-to-square"></i>Editar</button>
+                                <button class="btnDeleteCategory"><i class="fa-solid fa-trash"></i> Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </section>
+
+
+    </main>
+    <div id="addCategoryModal" style="display: none;">
+        <div class="modal-content">
+            <h2>Agregar Categoría</h2>
+            <form class="form-add-category" onsubmit="return validateAddCategoryForm()">
+                <label for="newCategoryName">Nombre de la Categoría:</label>
+                <input type="text" id="newCategoryName" name="newCategoryName">
+                <div id="newCategoryNameError" style="color: red; display: none;">El nombre de la categoría es obligatorio.</div>
+
+                <label for="newCategoryImage">Imagen de la Categoría:</label>
+                <input type="file" id="newCategoryImage" name="newCategoryImage" accept="image/*">
+                <div id="newCategoryImageError" style="color: red; display: none;">La imagen de la categoría es obligatoria.</div>
+
+                <button id="addButton" type="submit">Agregar</button>
+            </form>
+            <button class="close">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="editModal" style="display: none;">
+        <div class="modal-content">
+            <h2>Editar Categoría</h2>
+            <form class="form-edit-category" onsubmit="return validateEditCategoryForm()">
+                <label for="categoryName">Nombre de la Categoría:</label>
+                <input type="text" id="categoryName" name="categoryName">
+                <div id="categoryNameError" style="color: red; display: none;">El nombre de la categoría es obligatorio.</div>
+
+                <label for="categoryImage">Imagen de la Categoría:</label>
+                <input type="file" id="categoryImage" name="categoryImage" accept="image/*">
+                <div id="categoryImageError" style="color: red; display: none;">La imagen de la categoría es obligatoria.</div>
+
+                <button id="saveButton" type="submit">Guardar</button>
+            </form>
+            <button class="close">Cerrar</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('btnCerrarSesion').addEventListener('click', function() {
+            import('../../client/js/utils.js').then(module => {
+                module.logout();
+            });
+            window.location.href='../../login-page.html';
+        });
+    </script>
+
+
+    <script src="../scripts/home-admin-categories/load-categories.js" type="module"></script>
+    <script src="../scripts/home-admin-categories/add-category.js" type="module"></script>
+    <script src="../scripts/home-admin-categories/edit-category.js" type="module"></script>
+    <script src="../scripts/home-admin-categories/delete-category.js" type="module"></script>
+
+</body>
+</html>

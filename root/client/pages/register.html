@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet" href="../css/register/register.css">
+    <title>QuickLearn</title>
+
+</head>
+
+<body>
+    <main class="main-container">
+        <section class="register-section">
+            <div class="container">
+                <div class="first-container">
+                    <h1>QuickLearn</h1>
+                </div>
+                <div class="second-container">
+                    <h2>Registro</h2>
+                    <form id="registerForm">
+                        <input type="text" id="nombre" placeholder="Nombre">
+                        <div id="nombre-error" class="error-message" style="display: none; color: red;"></div>
+                        <input type="text" id="apellido" placeholder="Apellido">
+                        <div id="apellido-error" class="error-message" style="display: none; color: red;"></div>
+                        <input type="email" id="correo_electronico" placeholder="Correo electrónico">
+                        <div id="correo-error" class="error-message" style="display: none; color: red;"></div>
+                        <input type="password" id="contrasena" placeholder="Contraseña">
+                        <div id="contrasena-error" class="error-message" style="display: none; color: red;"></div>
+                        <button type="submit">REGISTRARSE</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../js/register/register.js"></script>
+</body>
+</html>

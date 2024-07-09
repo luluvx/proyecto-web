@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickLearn</title>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/information-features-company.css">
+    <link rel="stylesheet" href="css/inscription.css">
+    <link rel="stylesheet" href="css/category-section.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <p class="logo">QuickLearn</p>
+            <nav class="menu-bar">
+                <label for="menu-switch" class="menu-mobile-label">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <input id="menu-switch" type="checkbox">
+                <ul>
+                    <li>
+                        <a href="#infoFeatures">¿Porque QuickLearn?</a>
+                    </li>
+                    <li>
+                        <a href="#inscriptionStudent">Inscripción</a>
+                    </li>
+                    <li>
+                        <a href="#categories">Categorias</a>
+                    </li>
+                    <li>
+                        <a id="btnIngresar" href="login-page.html">Ingresar</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main-container">
+        <figure class="banner">
+            <div class="container">
+                <!--<img src="images/laptop-mockup.png" alt="Laptop illustrator">-->
+                <h1>Bienvenido a QuickLearn</h1>
+                <p>Descubre una forma rapida y sencilla de adquirir nuevas habilidades</p>
+            </div>
+        </figure>
+        <section class="information-features-company" id="infoFeatures">
+            <div class="container">
+                <h2>¿Porque QuickLearn?</h2>
+                <h3>Hacemos que tu aprendizaje sea efectivo!</h3>
+                <p>Somos una plataforma con caracteristicas excepcionales para que disfrutes al maximo y aproveches cada momento de tu aprendizaje. </p>
+                <div class="content-container">
+                    <video controls muted class="video-viewer" src="/root/assets/media/muestradefuncionamiento.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></video>                    
+                    <div class="features-container">
+                        <div class="feature-item">
+                            <img src="assets/images/ordenador-portatil.png" alt="Imagen de portatil">
+                            <h3>Estudia donde quieras</h3>
+                        </div>
+                        <div class="feature-item feature-item-center">
+                            <img src="assets/images/feliz.png" alt="Imgen de comunidad">
+                            <h3>Comunidad de aprendizaje</h3>
+                        </div>
+                        <div class="feature-item">
+                            <img src="assets/images/programador.png" alt="Imagen programador">
+                            <h3>Excelentes profesores</h3>
+                        </div>
+                    </div>
+                </div> 
+            </div>  
+        </section>
+        <section class="inscription" id="inscriptionStudent">
+            <div class="container">
+                <div class="inscription-content">
+                    <h2>¿Listo para comenzar?</h2>
+                    <p>Inscribete ahora y descubre por que mas de 950.000 estudiantes confian en nosotros para su educaccion.</p>
+                    <button onclick="window.location.href='/root/login-page.html'">Inscribirse</button>
+
+                </div>   
+                <img src="assets/images/student-image.jpeg" alt="Imagen de estudiante">  
+            </div>
+        </section>
+        <section class="category-section" id="categories">
+            <div class="container">
+                <h2>Explora</h2>
+                <p>Nuestra amplia variedad de cursos para expandir tus horizontes</p>
+                <div class="category-item-container">
+                    <!--
+                    <div class="category-item" onclick="window.location.href='client/pages/home-unregistered-user.html'">
+                        <img src="assets/images/programacion3.png" alt="Imagen categoria programacion">
+                        <h3>Programacion</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="assets/images/sitio-web1.png" alt="">     
+                        <h3>Desarrollo <br> Web</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="assets/images/desarrollo-de-aplicaciones.png" alt="">
+                        <h3>Desarrollo <br> Movil</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="assets/images/inteligencia-artificial.png" alt="">
+                        <h3>Inteligencia <br>Artificial</h3>
+                    </div>
+                    -->
+                    
+                </div>
+            </div>  
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="social-media">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <p>QuickLearn</p>
+            <div class="copyright-container">
+                <p class="copyright-text">Copyright 2017 All Rights Reserved by QuickLearn.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main/loadCategories.js"></script>
+</body>
+
+</html>
